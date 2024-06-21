@@ -6,17 +6,17 @@
     <title>CRUD Flask</title>
 </head>
 <body>
-    <form action="/usuarios/create" method="post">
-        <legend>Cadastrar Pessoa</legend><br>
+    <form action="/usuarios/update/{{u.id}}" method="post">
+        <legend>Alterar Pessoa</legend><br>
         <div>
             <label for="">Nome</label><br>
-            <input type="text" name="nome"><br>
+            <input type="text" name="nome" value="{{u.nome}}"><br>
             <label for="">Sobrenome</label><br>
-            <input type="text" name="sobrenome">
+            <input type="text" name="sobrenome" value="{{u.sobrenome}}">
         </div>
         <div>
             <label for="">Email</label><br>
-            <input type="text" name="email"><br>
+            <input type="text" name="email" value="{{u.email}}"><br>
         </div>
         <div>
             <label for="">Senha</label><br>
@@ -26,7 +26,7 @@
         </div>
         <div>
             <br>
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Atualizar</button>
         </div>
     </form>
 </body>
